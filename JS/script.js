@@ -68,7 +68,6 @@ for (let i = 0; i < buttonImages.length; i++) {
   });
 }
 
-  
   let buttonDiv = document.createElement('div');
   buttonDiv.style.display = 'flex';
   buttonDiv.style.justifyContent = 'center';
@@ -77,9 +76,9 @@ for (let i = 0; i < buttonImages.length; i++) {
   
   let alertButton1 = document.createElement('button');
   alertButton1.textContent = 'Sobre mim';
-  alertButton1.classList.add('popup');
+  alertButton1.classList.add('popup2');
   alertButton1.addEventListener('click', function() {
-    window.location.href = 'sobre.html';
+    window.location.href = '';
   });
   buttonDiv.appendChild(alertButton1);
   
@@ -89,6 +88,13 @@ for (let i = 0; i < buttonImages.length; i++) {
   alertButton2.addEventListener('click', function() {
     window.location.href = 'certificado.html';
   });
+  let certificadosText = document.createTextNode('');
+alertButton2.appendChild(certificadosText);
+
+let certificadosIcon = document.createElement('img');
+certificadosIcon.setAttribute('src', 'IMG/download.png');
+certificadosIcon.classList.add('download');
+alertButton2.appendChild(certificadosIcon);
   buttonDiv.appendChild(alertButton2);
 
   
@@ -98,49 +104,34 @@ text4.textContent = '"𝘌𝘷𝘦𝘯 𝘪𝘧 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘯�
 text4.classList.add('text-class4');
 container.appendChild(text4);
 
-
-
-
 const slides = document.querySelectorAll('.slide');
 const buttons = document.querySelectorAll('.nav-button');
 
 let currentSlide = 1;
 
-// Função para mostrar o slide atual
 const showSlide = (slideIndex) => {
-  // Verifica se o slideIndex é válido
   if (slideIndex < 1) {
     slideIndex = slides.length;
   } else if (slideIndex > slides.length) {
     slideIndex = 1;
   }
-
-  // Esconde todos os slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove('active');
   }
-
-  // Mostra o slide atual
   slides[slideIndex - 1].classList.add('active');
-
-  // Atualiza o botão de navegação atual
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].classList.remove('active');
   }
   buttons[slideIndex - 1].classList.add('active');
-
-  // Atualiza o índice do slide atual
   currentSlide = slideIndex;
 };
 
-// Adiciona o evento de clique para os botões de navegação
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', () => {
     showSlide(i + 1);
   });
 }
 
-// Inicia o carrossel automaticamente
 setInterval(() => {
   showSlide(currentSlide + 1);
 }, 5000);
