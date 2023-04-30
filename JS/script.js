@@ -79,7 +79,7 @@ for (let i = 0; i < buttonImages.length; i++) {
   alertButton1.textContent = 'Sobre mim';
   alertButton1.classList.add('popup');
   alertButton1.addEventListener('click', function() {
-    alert('Alerta 1!');
+    window.location.href = 'sobre.html';
   });
   buttonDiv.appendChild(alertButton1);
   
@@ -87,7 +87,7 @@ for (let i = 0; i < buttonImages.length; i++) {
   alertButton2.textContent = 'Certificados';
   alertButton2.classList.add('popup');
   alertButton2.addEventListener('click', function() {
-    alert('Alerta 2!');
+    window.location.href = 'certificado.html';
   });
   buttonDiv.appendChild(alertButton2);
 
@@ -97,5 +97,59 @@ let text4 = document.createElement('p');
 text4.textContent = '"𝘌𝘷𝘦𝘯 𝘪𝘧 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘯𝘰𝘵 𝘳𝘦𝘢𝘥𝘺 𝘧𝘰𝘳 𝘵𝘩𝘦 𝘥𝘢𝘺, 𝘪𝘵 𝘤𝘢𝘯𝘯𝘰𝘵 𝘢𝘭𝘸𝘢𝘺𝘴 𝘣𝘦 𝘯𝘪𝘨𝘩𝘵."';
 text4.classList.add('text-class4');
 container.appendChild(text4);
+
+
+
+
+const slides = document.querySelectorAll('.slide');
+const buttons = document.querySelectorAll('.nav-button');
+
+let currentSlide = 1;
+
+// Função para mostrar o slide atual
+const showSlide = (slideIndex) => {
+  // Verifica se o slideIndex é válido
+  if (slideIndex < 1) {
+    slideIndex = slides.length;
+  } else if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  // Esconde todos os slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove('active');
+  }
+
+  // Mostra o slide atual
+  slides[slideIndex - 1].classList.add('active');
+
+  // Atualiza o botão de navegação atual
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove('active');
+  }
+  buttons[slideIndex - 1].classList.add('active');
+
+  // Atualiza o índice do slide atual
+  currentSlide = slideIndex;
+};
+
+// Adiciona o evento de clique para os botões de navegação
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', () => {
+    showSlide(i + 1);
+  });
+}
+
+// Inicia o carrossel automaticamente
+setInterval(() => {
+  showSlide(currentSlide + 1);
+}, 5000);
+
+const main = document.querySelector('main');
+const texto = document.createElement('p');
+texto.textContent = 'O desafio TAG Livros <br> teve 853 participantes, totalizando mais de 1104 microrromances inscritos. Como critério para participação os textos deveriam ter no máximo 500 caracteres (com exceção do título), com temática livre, ser inéditos — não tendo sido publicados em nenhum meio até a data da inscrição, nem mesmo em blogs pessoais e redes sociais — e não infringir direitos autorais. A comissão avaliadora foi composta por três escritores, escolhidos pela Revista Bula. A TAG Livros, patrocinadora oficial do concurso, não participou na escolha dos premiados, nem é solidária nos direitos de publicação dos textos vencedores. Todos os autores selecionados assinaram Termo de Anuência, confirmando a autoria dos textos, com cessão de direitos autorais para a Revista Bula.';
+texto.classList.add('sobre');
+main.appendChild(texto);
+
 
 
