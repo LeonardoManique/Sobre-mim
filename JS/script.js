@@ -7,7 +7,7 @@ img.src = 'IMG/leonardo.jpg';
 img.style.width = '250px';
 img.style.height = '250px';
 img.style.borderRadius = '50%';
-img.style.marginLeft = '176px';
+img.style.marginLeft = '183px';
 container.appendChild(img);
 
 let text1 = document.createElement('p');
@@ -71,9 +71,34 @@ for (let i = 0; i < buttonImages.length; i++) {
   });
 }
 
+  
+  let buttonDiv = document.createElement('div');
+  buttonDiv.style.display = 'flex';
+  buttonDiv.style.justifyContent = 'center';
+  buttonDiv.style.marginTop = '20px';
+  container.appendChild(buttonDiv);
+  
+  let alertButton1 = document.createElement('button');
+  alertButton1.textContent = 'Sobre mim';
+  alertButton1.classList.add('popup');
+  alertButton1.addEventListener('click', function() {
+    alert('Alerta 1!');
+  });
+  buttonDiv.appendChild(alertButton1);
+  
+  let alertButton2 = document.createElement('button');
+  alertButton2.textContent = 'Certificados';
+  alertButton2.classList.add('popup');
+  alertButton2.addEventListener('click', function() {
+    alert('Alerta 2!');
+  });
+  buttonDiv.appendChild(alertButton2);
+
+  
+
 let text4 = document.createElement('p');
 text4.textContent = '"𝘌𝘷𝘦𝘯 𝘪𝘧 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘯𝘰𝘵 𝘳𝘦𝘢𝘥𝘺 𝘧𝘰𝘳 𝘵𝘩𝘦 𝘥𝘢𝘺, 𝘪𝘵 𝘤𝘢𝘯𝘯𝘰𝘵 𝘢𝘭𝘸𝘢𝘺𝘴 𝘣𝘦 𝘯𝘪𝘨𝘩𝘵."';
 text4.classList.add('text-class4');
 container.appendChild(text4);
 
-   
+

@@ -76,5 +76,23 @@ body{
     transform: scale(1.1); 
     opacity: 1;
 }
+
+.popup{
+    color: white;
+    width: 288px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.267);
+    text-align: center;
+    border-radius: 17px;
+    border: none;
+    font-size: 18px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px;
+    margin-left: -1px;
+
+}
   
   
