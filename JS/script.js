@@ -7,7 +7,7 @@ img.src = 'IMG/leonardo.jpg';
 img.style.width = '250px';
 img.style.height = '250px';
 img.style.borderRadius = '50%';
-img.style.marginLeft = '183px';
+img.style.marginLeft = '100px';
 container.appendChild(img);
 
 let text1 = document.createElement('p');
