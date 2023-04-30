@@ -23,8 +23,13 @@ body{
     margin-top: 20px;
     flex-wrap: wrap;
 }
+
+.container{
+    display: contents;
+}
     
 #son{
+    display: flex;
     text-align: center;
     width: 100%;
 }
@@ -60,7 +65,7 @@ body{
     border-radius: 17px;
     background-color: rgba(255, 255, 255, 0.267);
     height: 50px;
-    width: 100%;  
+    width: 30%;  
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -80,7 +85,7 @@ body{
 .popup{
     color: white;
     width: 90%;
-    max-width: 288px;
+    max-width: 400px;
     height: 42px;
     background-color: rgba(255, 255, 255, 0.267);
     text-align: center;
@@ -99,7 +104,7 @@ body{
     max-width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-left: 28%;
+    /*margin-left: 28%; */
     display: flex;
     justify-content: center;
     align-items: center;
