@@ -86,7 +86,7 @@ for (let i = 0; i < buttonImages.length; i++) {
   alertButton2.textContent = 'Certificados';
   alertButton2.classList.add('popup');
   alertButton2.addEventListener('click', function() {
-    window.location.href = 'certificado.html';
+    window.location.href = 'https://doc-b8-38-drive-data-export.googleusercontent.com/download/cki5sunvsi0r81n58rq8sb13453kgsb7/o8agadhukp2m1b69j2d60fqke2oeaii7/1682964000000/bce0078f-c7c6-4716-bee2-71c0b64c7bbf/112598124987670103849/ADt3v-N8J5kEG1qy8b2hdo5qMCox2KC_wJqM22ddQE5x0l58eIu2cP7Zoh3iftnxaV_yMDnBkfG0P40RC39VGHjmiBb-DKAoX_IlMwPJRmHP2fVFOQDlvEkvQy3Eb3CDpSnVYm6kaA4TgETWUrUmOjzggsUfN-ese-nV6nQE9oNdCrWvJkauaer6NKusTLJVj7NkZ-GJUkudTzGk8-N3Bem6YDj7eigMyB-Kk-EUA7whPUmE8rxrP_Z1On9Khb-6Gvz7q3rLAd7mVtnKlg8nk8-97Zz1j3PIxljjE26TwVKXu8RdGj3yWckRgX7CvVjXJij1PG65ul1b?authuser=0&nonce=odd87rtqsggfc&user=112598124987670103849&hash=rnh0n76acd15ah9v23pedtq37de5k2ag';
   });
   let certificadosText = document.createTextNode('');
 alertButton2.appendChild(certificadosText);
